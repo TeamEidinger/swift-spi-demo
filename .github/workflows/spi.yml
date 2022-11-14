@@ -1,0 +1,9 @@
+name: Swift Package Dependencies
+
+on: 
+  workflow_dispatch:
+jobs:
+  dependencies:
+    uses: MarcoEidinger/swift-package-dependencies-check/.github/workflows/reusableWorkflow.yml@main
+    with:
+      commit-message: 'chore: update package dependencies'
