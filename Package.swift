@@ -10,11 +10,11 @@ let package = Package(
             targets: ["Shopping"]
         ),
     ],
-    dependencies: [.package(url: "https://github.com/apple/swift-argument-parser.git", .upToNextMinor(from: "1.1.0"))],
+    dependencies: [.package(url: "https://github.com/apple/swift-argument-parser.git", .upToNextMinor(from: "1.0.0"))],
     targets: [
         .target(
             name: "Shopping",
-            dependencies: [],
+            dependencies: [.product(name: "ArgumentParser", package: "swift-argument-parser")],
             swiftSettings: [
                 .unsafeFlags(["-enable-library-evolution"]),
 //                .unsafeFlags(["-Xfrontend", "-experimental-spi-only-imports"]) // requires Swift 5.8
